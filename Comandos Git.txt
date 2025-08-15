@@ -1,0 +1,75 @@
+criar chave ssh:
+
+pesquisar no google GitHub ssh
+seguir as instruções do site to GitHub, copiar o commando que ele vai gerar e executar no terminal do git
+
+configurar nome do usuário: git config --global user.name "nome do usuário"
+configurar email do usuário: git config --global user.email "email do usuário"
+
+git log: exibe todos os commits
+
+git status: exibe o status dos arquivos
+
+para fazer um commit:
+
+git add . (o . inclui todos os arquivos) ou git add nomedoarquivo
+git commit -m "mensagem do commit"
+
+voltar versões:
+
+git checkout + 6 primeiros digitos do hash do commit desejado
+
+voltar para a última versão:
+
+git checkout master (se não funcionar, tentar git checkout main)
+
+criar novo branch:
+
+git branch nomeDoBranch
+
+mudar trabalho para o novo branch
+
+git checkout nomeDoBranch
+
+sempre que for mudar de branch, certificar-se de ter feito commit das alterações antes.
+
+mudar nome de branch já existente:
+
+git branch -m novonome (deve já estar apontando para esse branch)
+
+fazer merge (estando apontando para o branch principal):
+
+git merge nomeDoBranch (nome do branch a ser mergeado) (merge local apenas. para subir o merge para o GitHub: git push origin nomeDoBranchPrincipal (ou do branch a ser mergeado)
+
+
+apontar repositório local para o GitHub:
+
+git remote add origin  URLdoRepositorio (no GitHub) (pode-se dar qualquer nome além de origin. Esse nome é um apelido do repositório remoto)
+
+
+fazer upload do Código no GitHub
+
+git push -u origin main (main ou nome do branch que está trabalhando)
+
+clonar repositório à partir do GitHub
+
+git clone URLdoRepositorio (no GitHub) (precisa estar com o terminal apontando para o repositório destino desejado)
+
+atualizar branch existente no computador com a ultima versão do GitHub: Estando com o terminal apontado para o branch que deseja atualizar: git pull origin
+
+Para listar os repositórios remotos associados ao seu projeto local, você pode utilizar o comando git remote -v. 
+Isso exibirá uma lista de todos os repositórios remotos vinculados ao seu projeto, juntamente com suas URLs. Veja um exemplo:
+
+git remote -v
+
+Saída do comando acima:
+origin   https://github.com/seu-usuario/seu-projeto.git (fetch)
+origin   https://github.com/seu-usuario/seu-projeto.git (push)
+
+Se você deseja renomear um repositório remoto, use o comando git remote rename apelido novo_apelido. 
+Substitua 'apelido' pelo nome atual do repositório remoto e 'novo_apelido' pelo novo nome que você deseja atribuir a ele. 
+Aqui está um exemplo:
+
+git remote rename origin novo-origin
+Copiar código
+Isso renomeará o repositório remoto de "origin" para "novo-origin".
